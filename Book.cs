@@ -4,7 +4,8 @@ namespace Library
 {
     public class Book
     {
-        public Guid ID { get; set; }
+
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
         public string Genre { get; set; }
@@ -12,16 +13,18 @@ namespace Library
         public bool IsAvailable { get; set; }
         public DateTime? DueDate { get; set; }
         public User Borrower { get; set; }
+
         public Book()
         {
-            ID = Guid.NewGuid();
-            Author = string.Empty;
+            Id = Guid.NewGuid();
             Title = string.Empty;
+            Author = string.Empty;
             Genre = string.Empty;
             Year = 0;
             IsAvailable = true;
             DueDate = null;
             Borrower = null;
         }
+
     }
 }
